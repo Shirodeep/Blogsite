@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header') %>
+    <body>
+        <%- include('./partials/navigation') %>
+
+        <div class="details">
+            <h2><%= blog.title %></h2>            
+            <div class="single-body-details">
+                <p><%= blog.body%></p>
+            </div class="lala" >
+                <a class="delete" data-doc="<%= blog.id%>">Delete</a>
+        </div>
+        <script> 
+            const trash = document.querySelector('a.delete');
+            trash.addEventListener('click', (e) =>{
+                const end = `/blogs/${trash.dataset.doc}`;
+                fetch(end, {
+                    method: 'DELETE'
+                })
+                .then((response) =>{response.json})
+                .then((data) => console.log(data))
+                .catch((err) => console.log(err));
+            })
+        </script>
+    </body>   
+</html>

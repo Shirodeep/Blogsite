@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+nav {
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  border: 0px;
+}
+
+.news-Heading {
+  text-align: center;
+  padding: 35px 20px;
+  background-color: lightblue;
+  margin: 0px;
+  border: 0px;
+}
+nav ul {
+  float: inherit;
+  position: sticky;
+  display: flex;
+  padding: 0.5px 5px 0px 6px;
+  width: full;
+  background-color: rgb(172, 175, 123);
+}
+
+li {
+  position: -webkit-sticky;
+  list-style-type: none;
+  width: full;
+  background-color: rgb(172, 175, 123);
+}
+li a {
+  display: block;
+  color: rgb(105, 25, 25);
+  text-align: center;
+  padding: 7px 20px;
+  text-decoration: rgb(107, 22, 22);
+}
+li a:hover,
+b:hover {
+  background-color: rgb(96, 151, 91);
+}
+li b {
+  display: block;
+  color: rgb(105, 25, 25);
+  text-align: center;
+  text-decoration: rgb(107, 22, 22);
+  padding: 8px 15px;
+}
+.login {
+  position: sticky;
+  border: 0px lightskyblue;
+  background-color: lightskyblue;
+  padding: 5px 40px 5px 5px;
+  text-align: center;
+  height: 100%;
+}
+.create-blog-content {
+  position: relative;
+  margin-top: 3.5%;
+  margin-left: 15%;
+  width: 70%;
+  right: 30px;
+  height: 500px;
+}
+
+.create-blog-content #label1 {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+  font-size: 29px;
+}
+.create-blog-content #label2 {
+  position: absolute;
+  top: 110px;
+  left: 150px;
+  font-size: 29px;
+}
+.create-blog-content #label3 {
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  font-size: 29px;
+}
+input {
+  font-size: 20px;
+  height: 30px;
+  width: 400px;
+  position: relative;
+  margin: 5px;
+  top: 27px;
+  left: 295px;
+}
+input #title {
+  font-style: bold !important;
+}
+#body {
+  padding: 1px;
+  position: relative;
+  height: 300px;
+  width: 400px;
+  left: 300px;
+  top: 30px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+#submit {
+  position: absolute;
+  font-size: 20px;
+  height: 35px;
+  width: 70px;
+  left: 630px;
+  top: 500px;
+}
+footer {
+  top: 790px;
+  width: 1350px;
+  position: absolute;
+  text-align: center;
+  padding: 30px;
+  background-color: lightblue;
+}
+
+#add-blog-page {
+  background-color: tan;
+  height: 800px;
+}
+#add-blog-title {
+  margin: 0;
+  padding-top: 0px;
+  text-align: center;
+  border: 0;
+}
+.details {
+  position: relative;
+}
+.delete {
+  display: block;
+  position: absolute;
+  padding: 8px;
+  top: 0px;
+  right: 0;
+  border-radius: 40%;
+}
+.delete:hover {
+  background-color: rebeccapurple;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}

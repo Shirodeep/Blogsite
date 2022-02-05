@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header') %>
+
+<body>
+ <div id="add-blog-page">   
+  <%- include('./partials/navigation') %>
+  <div id="add-blog-title"><h1>You can add your own blog here</h1></div>
+  <div class="create-blog-content">  
+    <form action="/blog" method="POST">
+        <label id="label1" for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label id="label2" for="discription">Discription:</label><br>
+        <input type="text" id="discription" name="discription" required><br><br>
+        <label id="label3" for="body">Body:</label>  
+        <textarea id="body" name="body" required></textarea>
+        <button id="submit">Submit</button>
+    </form> 
+  </div>
+
+  <%- include('./partials/footer') %>
+ </div>
+</body>
+</html>
