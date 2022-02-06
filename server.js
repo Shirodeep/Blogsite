@@ -1,11 +1,11 @@
+const { response } = require('express');
 const express = require( 'express');
-const morgan = require( 'morgan');
+// const morgan = require( 'morgan');
 const mongoose = require( 'mongoose');
 const Blog = require( './modules/blog.js');
 const Form= require('./modules/login');
 
 const app = express();
-
 const dbase = 'mongodb+srv://test-node:testnode@skaldl.knctw.mongodb.net/node-test?retryWrites=true&w=majority';
 mongoose.connect(dbase, { useNewUrlParser: true , useUnifiedTopology: true})
     .then((result) => app.listen(3000) + console.log("connected to the database!"))
@@ -80,7 +80,15 @@ app.get('/login', (req, res) =>{
     res.render('loginpage', {title: "Blogs-Login"})
 });
 app.post('/login' ,(req, res)=>{
-    const loginForm = new Form
+    const loginForm = new Form(req.body);
+    console.log(loginForm);
+    loginForm.save()
+    .then((result)=>{
+        res.redirect('/blogs');
+        console.log(result);
+    })
+    .catch((err) => {console.log(err);
+    });
 });
 app.use((req, res) =>{
     res.render('error', {title: '404ERROR'});

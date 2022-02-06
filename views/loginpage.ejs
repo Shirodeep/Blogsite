@@ -3,15 +3,14 @@
 <%- include('./partials/header') %>
 <body>
     <%-include('./partials/navigation') %>
-     
+     <h1>Login</h1>
     <form action="/login" method="POST">
-        <label for="fname">Username:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="usermail@email.com" required><br>
-        <label for="lname">password:</label><br>
-        <input type="password" id="lname" name="lname" placeholder="password" required><br><br>
-        <input type="submit" value="Submit">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="usermail@email.com" required><br>
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password" placeholder="password" required><br><br>
+        <button type="submit" >Submit</button>
       </form> 
-
     <%- include('./partials/footer')%>
 </body>
 </html>

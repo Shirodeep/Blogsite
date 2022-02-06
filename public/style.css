@@ -157,3 +157,14 @@ footer {
   cursor: pointer;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 990px){
+  footer {
+    top: 330px;
+    width: 990px;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    background-color: lightblue;
+  }
+}
